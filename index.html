@@ -1,89 +1,82 @@
 <!DOCTYPE html>
-<html lang="en" class="bg-white text-gray-800 dark:bg-gray-900 dark:text-white transition-colors duration-300">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Benjamin's Portfolio</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="font-sans">
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Benjamin's Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+      };
+    </script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+  </head>
+  <body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300">
+    <header class="flex justify-between items-center p-4 shadow-md sticky top-0 bg-white dark:bg-gray-900 z-50">
+      <h1 class="text-2xl font-bold">🚀 Benjamin's Portfolio</h1>
+      <button onclick="document.documentElement.classList.toggle('dark')" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700">
+        <i data-lucide="moon" class="w-5 h-5"></i>
+      </button>
+    </header>
 
-  <!-- Header -->
-  <header class="flex justify-between items-center p-5 shadow-md">
-    <h1 class="text-2xl font-bold">Benjamin Otieno</h1>
-    <button id="toggleTheme" class="px-3 py-1 border rounded">Toggle Theme</button>
-  </header>
+    <main class="max-w-5xl mx-auto px-4 py-8">
+      <section class="mb-12 text-center">
+        <h2 class="text-3xl font-bold mb-2">👋 Hi, I'm Benjamin</h2>
+        <p class="text-lg">A Software Engineer passionate about building impactful digital experiences.</p>
+      </section>
 
-  <!-- Hero -->
-  <section class="text-center py-16 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white">
-    <h2 class="text-4xl font-bold mb-2">Hi, I'm Benjamin</h2>
-    <p class="text-xl">Full Stack Developer | Problem Solver | Tech Enthusiast</p>
-  </section>
+      <section id="projects" class="mb-12">
+        <h3 class="text-2xl font-semibold mb-4">💼 Projects</h3>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="bg-white dark:bg-gray-800 p-4 rounded-xl shadow">
+            <h4 class="text-xl font-bold mb-1">💊 Interior Health</h4>
+            <p class="mb-2">An app providing affordable health care drugs to interior regions. Features role-based access, drug ordering, and delivery tracking.</p>
+            <a href="#" class="text-blue-500 hover:underline">🔗 View Project</a>
+          </div>
 
-  <!-- About -->
-  <section id="about" class="p-8 max-w-4xl mx-auto">
-    <h3 class="text-2xl font-semibold mb-4">About Me</h3>
-    <p>I am a passionate full stack developer with a background in emergency management and software engineering. I love building impactful digital products and solving real-world problems.</p>
-  </section>
+          <div class="bg-white dark:bg-gray-800 p-4 rounded-xl shadow">
+            <h4 class="text-xl font-bold mb-1">🧑‍💼 Jobify</h4>
+            <p class="mb-2">A job tracking app where users can manage job applications, interviews, and offers through a beautiful dashboard.</p>
+            <a href="#" class="text-blue-500 hover:underline">🔗 View Project</a>
+          </div>
 
-  <!-- Skills -->
-  <section id="skills" class="p-8 max-w-4xl mx-auto">
-    <h3 class="text-2xl font-semibold mb-4">Skills</h3>
-    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
-      <span class="bg-gray-200 dark:bg-gray-800 p-2 rounded">HTML</span>
-      <span class="bg-gray-200 dark:bg-gray-800 p-2 rounded">CSS</span>
-      <span class="bg-gray-200 dark:bg-gray-800 p-2 rounded">JavaScript</span>
-      <span class="bg-gray-200 dark:bg-gray-800 p-2 rounded">Python</span>
-      <span class="bg-gray-200 dark:bg-gray-800 p-2 rounded">Django</span>
-      <span class="bg-gray-200 dark:bg-gray-800 p-2 rounded">React</span>
-      <span class="bg-gray-200 dark:bg-gray-800 p-2 rounded">Tailwind CSS</span>
-      <span class="bg-gray-200 dark:bg-gray-800 p-2 rounded">MySQL</span>
-    </div>
-  </section>
+          <div class="bg-white dark:bg-gray-800 p-4 rounded-xl shadow">
+            <h4 class="text-xl font-bold mb-1">📋 Project Management App</h4>
+            <p class="mb-2">A collaborative task-tracking system with real-time updates, built using TypeScript and Express.</p>
+            <a href="#" class="text-blue-500 hover:underline">🔗 View Project</a>
+          </div>
+        </div>
+      </section>
 
-  <!-- Projects -->
-  <section id="projects" class="p-8 max-w-4xl mx-auto">
-    <h3 class="text-2xl font-semibold mb-4">Projects</h3>
-    <div class="grid gap-6">
-      <div class="border dark:border-gray-700 rounded p-4">
-        <h4 class="font-bold text-xl">Project Management App</h4>
-        <p class="mt-2">A full-featured app to manage teams, tasks, and collaboration in real-time. Built using React, Node.js, and PostgreSQL.</p>
-        <a href="#" class="text-blue-500 underline mt-2 inline-block">View Project</a>
-      </div>
+      <section id="resume" class="mb-12">
+        <h3 class="text-2xl font-semibold mb-4">📄 Resume</h3>
+        <a href="resume.pdf" download class="inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">⬇️ Download My Resume (PDF)</a>
+      </section>
 
-      <div class="border dark:border-gray-700 rounded p-4">
-        <h4 class="font-bold text-xl">Jobify</h4>
-        <p class="mt-2">A job tracking application allowing users to apply, track and manage job applications. Built with MongoDB, Express, React, and Node.</p>
-        <a href="#" class="text-blue-500 underline mt-2 inline-block">View Project</a>
-      </div>
-    </div>
-  </section>
+      <section id="contact" class="text-center">
+        <h3 class="text-2xl font-semibold mb-2">📬 Get in Touch</h3>
+        <p>Let's connect! I'm open to collaborations and freelance opportunities.</p>
+        <div class="flex justify-center gap-6 mt-4">
+          <a href="https://github.com/Jujutsualfayo" class="hover:text-blue-500" aria-label="GitHub">
+            <i data-lucide="github" class="w-6 h-6"></i>
+          </a>
+          <a href="https://linkedin.com/in/benjaminalfayo" class="hover:text-blue-500" aria-label="LinkedIn">
+            <i data-lucide="linkedin" class="w-6 h-6"></i>
+          </a>
+          <a href="mailto:benjaminalfayo90@gmail.com" class="hover:text-blue-500" aria-label="Email">
+            <i data-lucide="mail" class="w-6 h-6"></i>
+          </a>
+        </div>
+      </section>
+    </main>
 
-  <!-- Resume -->
-  <section id="resume" class="p-8 max-w-4xl mx-auto">
-    <h3 class="text-2xl font-semibold mb-4">Resume</h3>
-    <a href="resume.pdf" target="_blank" class="text-blue-500 underline">Download My Resume (PDF)</a>
-  </section>
+    <footer class="text-center text-sm p-4 text-gray-500 dark:text-gray-400">
+      © 2025 Benjamin Otieno. Built with 💖 & Tailwind CSS
+    </footer>
 
-  <!-- Contact -->
-  <section id="contact" class="p-8 max-w-4xl mx-auto">
-    <h3 class="text-2xl font-semibold mb-4">Contact Me</h3>
-    <p>Email: <a href="mailto:benjaminalfayo90@gmail.com" class="text-blue-500 underline">benjaminalfayo90@gmail.com</a></p>
-    <p>GitHub: <a href="https://github.com/Jujutsualfayo" class="text-blue-500 underline" target="_blank">Jujutsualfayo</a></p>
-    <p>LinkedIn: <a href="https://linkedin.com/in/benjamin-alfayo" class="text-blue-500 underline" target="_blank">Benjamin Alfayo</a></p>
-  </section>
-
-  <!-- Footer -->
-  <footer class="text-center py-4 mt-8 border-t dark:border-gray-700">
-    <p>&copy; 2025 Benjamin Otieno. All rights reserved.</p>
-  </footer>
-
-  <!-- Dark Mode Script -->
-  <script>
-    const toggleTheme = document.getElementById("toggleTheme");
-    toggleTheme.addEventListener("click", () => {
-      document.documentElement.classList.toggle("dark");
-    });
-  </script>
-</body>
+    <script>
+      lucide.createIcons();
+    </script>
+  </body>
 </html>
