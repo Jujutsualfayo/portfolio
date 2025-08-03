@@ -1,82 +1,80 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Benjamin's Portfolio</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        darkMode: 'class',
-      };
-    </script>
-    <script src="https://unpkg.com/lucide@latest"></script>
-  </head>
-  <body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300">
-    <header class="flex justify-between items-center p-4 shadow-md sticky top-0 bg-white dark:bg-gray-900 z-50">
-      <h1 class="text-2xl font-bold">🚀 Benjamin's Portfolio</h1>
-      <button onclick="document.documentElement.classList.toggle('dark')" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700">
-        <i data-lucide="moon" class="w-5 h-5"></i>
-      </button>
-    </header>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Benjamin's Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Toggle dark/light mode
+    function toggleTheme() {
+      document.documentElement.classList.toggle('dark');
+    }
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-papAZ9zkdFD3b9UOZozbA8Dsv4vDAjHlrbvCj4+dHDKmK4F2GL2yRp2LdJ7OpMS2lt1EPCcUquRlYpBldTIr8g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-white font-sans">
+  <header class="p-6 shadow-md flex justify-between items-center">
+    <h1 class="text-2xl font-bold">👨‍💻 Benjamin Otieno</h1>
+    <button onclick="toggleTheme()" class="bg-gray-200 dark:bg-gray-700 px-4 py-1 rounded">🌓 Toggle Theme</button>
+  </header>
 
-    <main class="max-w-5xl mx-auto px-4 py-8">
-      <section class="mb-12 text-center">
-        <h2 class="text-3xl font-bold mb-2">👋 Hi, I'm Benjamin</h2>
-        <p class="text-lg">A Software Engineer passionate about building impactful digital experiences.</p>
-      </section>
+  <section class="p-6">
+    <h2 class="text-xl font-semibold mb-4">📜 About Me</h2>
+    <p>
+      Hi! I'm Benjamin Otieno, a passionate software engineer specializing in full-stack web development.
+      I love building efficient, user-friendly web applications and solving real-world problems through code.
+    </p>
+  </section>
 
-      <section id="projects" class="mb-12">
-        <h3 class="text-2xl font-semibold mb-4">💼 Projects</h3>
-        <div class="grid md:grid-cols-2 gap-6">
-          <div class="bg-white dark:bg-gray-800 p-4 rounded-xl shadow">
-            <h4 class="text-xl font-bold mb-1">💊 Interior Health</h4>
-            <p class="mb-2">An app providing affordable health care drugs to interior regions. Features role-based access, drug ordering, and delivery tracking.</p>
-            <a href="#" class="text-blue-500 hover:underline">🔗 View Project</a>
-          </div>
+  <section class="p-6">
+    <h2 class="text-xl font-semibold mb-4">🧰 Skills</h2>
+    <ul class="list-disc list-inside">
+      <li>⚙️ Python, JavaScript, HTML, CSS</li>
+      <li>🧪 Django, React, Node.js</li>
+      <li>💽 MySQL, PostgreSQL</li>
+      <li>☁️ Git, GitHub, Vercel</li>
+    </ul>
+  </section>
 
-          <div class="bg-white dark:bg-gray-800 p-4 rounded-xl shadow">
-            <h4 class="text-xl font-bold mb-1">🧑‍💼 Jobify</h4>
-            <p class="mb-2">A job tracking app where users can manage job applications, interviews, and offers through a beautiful dashboard.</p>
-            <a href="#" class="text-blue-500 hover:underline">🔗 View Project</a>
-          </div>
-
-          <div class="bg-white dark:bg-gray-800 p-4 rounded-xl shadow">
-            <h4 class="text-xl font-bold mb-1">📋 Project Management App</h4>
-            <p class="mb-2">A collaborative task-tracking system with real-time updates, built using TypeScript and Express.</p>
-            <a href="#" class="text-blue-500 hover:underline">🔗 View Project</a>
-          </div>
+  <section class="p-6">
+    <h2 class="text-xl font-semibold mb-4">📂 Projects</h2>
+    <div class="grid md:grid-cols-2 gap-6">
+      <div class="p-4 border dark:border-gray-700 rounded-lg">
+        <h3 class="text-lg font-bold">💊 Interior Health</h3>
+        <p>A platform offering healthcare drugs to underserved regions at affordable prices.</p>
+        <div class="mt-2">
+          <a href="https://github.com/Jujutsualfayo/interior-health" class="text-blue-500 hover:underline"><i class="fab fa-github"></i> GitHub</a>
         </div>
-      </section>
-
-      <section id="resume" class="mb-12">
-        <h3 class="text-2xl font-semibold mb-4">📄 Resume</h3>
-        <a href="resume.pdf" download class="inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">⬇️ Download My Resume (PDF)</a>
-      </section>
-
-      <section id="contact" class="text-center">
-        <h3 class="text-2xl font-semibold mb-2">📬 Get in Touch</h3>
-        <p>Let's connect! I'm open to collaborations and freelance opportunities.</p>
-        <div class="flex justify-center gap-6 mt-4">
-          <a href="https://github.com/Jujutsualfayo" class="hover:text-blue-500" aria-label="GitHub">
-            <i data-lucide="github" class="w-6 h-6"></i>
-          </a>
-          <a href="https://linkedin.com/in/benjaminalfayo" class="hover:text-blue-500" aria-label="LinkedIn">
-            <i data-lucide="linkedin" class="w-6 h-6"></i>
-          </a>
-          <a href="mailto:benjaminalfayo90@gmail.com" class="hover:text-blue-500" aria-label="Email">
-            <i data-lucide="mail" class="w-6 h-6"></i>
-          </a>
+      </div>
+      <div class="p-4 border dark:border-gray-700 rounded-lg">
+        <h3 class="text-lg font-bold">💼 Jobify</h3>
+        <p>A job tracking app to manage your job applications and statuses.</p>
+        <div class="mt-2">
+          <a href="https://github.com/Jujutsualfayo/jobify" class="text-blue-500 hover:underline"><i class="fab fa-github"></i> GitHub</a>
         </div>
-      </section>
-    </main>
+      </div>
+      <div class="p-4 border dark:border-gray-700 rounded-lg">
+        <h3 class="text-lg font-bold">📊 Project Management App</h3>
+        <p>Tool for managing tasks, timelines, and collaboration for teams. </p>
+      </div>
+    </div>
+  </section>
 
-    <footer class="text-center text-sm p-4 text-gray-500 dark:text-gray-400">
-      © 2025 Benjamin Otieno. Built with 💖 & Tailwind CSS
-    </footer>
+  <section class="p-6">
+    <h2 class="text-xl font-semibold mb-4">📄 Resume</h2>
+    <p>Download my resume in PDF:</p>
+    <a href="./resume.pdf" class="text-blue-500 hover:underline" download>📎 Download Resume</a>
+  </section>
 
-    <script>
-      lucide.createIcons();
-    </script>
-  </body>
+  <section class="p-6">
+    <h2 class="text-xl font-semibold mb-4">📫 Contact</h2>
+    <p>Email: <a href="mailto:benjaminalfayo90@gmail.com" class="text-blue-500 hover:underline">benjaminalfayo90@gmail.com</a></p>
+    <p>GitHub: <a href="https://github.com/Jujutsualfayo" class="text-blue-500 hover:underline">@Jujutsualfayo</a></p>
+  </section>
+
+  <footer class="text-center p-6 text-sm text-gray-600 dark:text-gray-400">
+    © 2025 Benjamin Otieno. Built with 💖 and Tailwind CSS.
+  </footer>
+</body>
 </html>
