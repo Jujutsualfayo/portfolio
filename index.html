@@ -1,102 +1,89 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="bg-white text-gray-800 dark:bg-gray-900 dark:text-white transition-colors duration-300">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Benjamin Otieno – Portfolio</title>
-
-  <!-- Tailwind CSS -->
+  <title>Benjamin's Portfolio</title>
   <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- Google Font: Inter -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-    }
-  </style>
-
-  <!-- Font Awesome for Icons -->
-  <script src="https://kit.fontawesome.com/a2e0e1d1e6.js" crossorigin="anonymous"></script>
 </head>
-<body class="bg-gray-50 text-gray-800">
+<body class="font-sans">
 
-  <!-- Hero Section -->
-  <section class="min-h-screen flex flex-col justify-center items-center text-center bg-gradient-to-br from-blue-50 to-indigo-100 px-4">
-    <h1 class="text-5xl md:text-6xl font-bold mb-4 text-gray-900">Hi, I'm Benjamin</h1>
-    <p class="text-lg md:text-xl mb-6 max-w-xl text-gray-700">A Full Stack Developer crafting fast, accessible & meaningful digital experiences.</p>
-    <a href="#projects" class="px-6 py-3 bg-indigo-600 text-white rounded-full hover:bg-indigo-700 transition duration-300 shadow-md hover:shadow-lg">View My Work</a>
+  <!-- Header -->
+  <header class="flex justify-between items-center p-5 shadow-md">
+    <h1 class="text-2xl font-bold">Benjamin Otieno</h1>
+    <button id="toggleTheme" class="px-3 py-1 border rounded">Toggle Theme</button>
+  </header>
+
+  <!-- Hero -->
+  <section class="text-center py-16 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white">
+    <h2 class="text-4xl font-bold mb-2">Hi, I'm Benjamin</h2>
+    <p class="text-xl">Full Stack Developer | Problem Solver | Tech Enthusiast</p>
   </section>
 
-  <!-- About Section -->
-  <section id="about" class="py-16 px-4 bg-white">
-    <div class="max-w-4xl mx-auto text-center">
-      <h2 class="text-3xl font-semibold mb-4">About Me</h2>
-      <p class="text-lg text-gray-700">I’m a full stack developer with a background in emergency management. I create tools that solve real problems — fast, scalable, and beautiful. My stack includes Python, Django, React, Tailwind, and DevOps.</p>
+  <!-- About -->
+  <section id="about" class="p-8 max-w-4xl mx-auto">
+    <h3 class="text-2xl font-semibold mb-4">About Me</h3>
+    <p>I am a passionate full stack developer with a background in emergency management and software engineering. I love building impactful digital products and solving real-world problems.</p>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="p-8 max-w-4xl mx-auto">
+    <h3 class="text-2xl font-semibold mb-4">Skills</h3>
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+      <span class="bg-gray-200 dark:bg-gray-800 p-2 rounded">HTML</span>
+      <span class="bg-gray-200 dark:bg-gray-800 p-2 rounded">CSS</span>
+      <span class="bg-gray-200 dark:bg-gray-800 p-2 rounded">JavaScript</span>
+      <span class="bg-gray-200 dark:bg-gray-800 p-2 rounded">Python</span>
+      <span class="bg-gray-200 dark:bg-gray-800 p-2 rounded">Django</span>
+      <span class="bg-gray-200 dark:bg-gray-800 p-2 rounded">React</span>
+      <span class="bg-gray-200 dark:bg-gray-800 p-2 rounded">Tailwind CSS</span>
+      <span class="bg-gray-200 dark:bg-gray-800 p-2 rounded">MySQL</span>
     </div>
   </section>
 
-  <!-- Projects Section -->
-  <section id="projects" class="py-16 px-4 bg-gray-100">
-    <div class="max-w-6xl mx-auto text-center">
-      <h2 class="text-3xl font-semibold mb-10">Projects</h2>
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <!-- Project Card -->
-        <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg hover:scale-105 transition duration-300">
-          <h3 class="text-xl font-bold mb-2 text-indigo-700">Interior Health App</h3>
-          <p class="mb-4 text-gray-700">Healthcare platform for interior regions of Kenya. Built with Django + React.</p>
-          <a href="#" class="text-indigo-600 hover:underline">View Project</a>
-        </div>
-        <!-- Add more projects here -->
+  <!-- Projects -->
+  <section id="projects" class="p-8 max-w-4xl mx-auto">
+    <h3 class="text-2xl font-semibold mb-4">Projects</h3>
+    <div class="grid gap-6">
+      <div class="border dark:border-gray-700 rounded p-4">
+        <h4 class="font-bold text-xl">Project Management App</h4>
+        <p class="mt-2">A full-featured app to manage teams, tasks, and collaboration in real-time. Built using React, Node.js, and PostgreSQL.</p>
+        <a href="#" class="text-blue-500 underline mt-2 inline-block">View Project</a>
+      </div>
+
+      <div class="border dark:border-gray-700 rounded p-4">
+        <h4 class="font-bold text-xl">Jobify</h4>
+        <p class="mt-2">A job tracking application allowing users to apply, track and manage job applications. Built with MongoDB, Express, React, and Node.</p>
+        <a href="#" class="text-blue-500 underline mt-2 inline-block">View Project</a>
       </div>
     </div>
   </section>
 
-  <!-- Skills Section -->
-  <section id="skills" class="py-16 px-4 bg-white">
-    <div class="max-w-5xl mx-auto text-center">
-      <h2 class="text-3xl font-semibold mb-8">Skills</h2>
-      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 text-lg">
-        <div class="bg-indigo-50 p-4 rounded-lg shadow-sm">Python</div>
-        <div class="bg-indigo-50 p-4 rounded-lg shadow-sm">Django</div>
-        <div class="bg-indigo-50 p-4 rounded-lg shadow-sm">JavaScript</div>
-        <div class="bg-indigo-50 p-4 rounded-lg shadow-sm">React</div>
-        <div class="bg-indigo-50 p-4 rounded-lg shadow-sm">Tailwind CSS</div>
-        <div class="bg-indigo-50 p-4 rounded-lg shadow-sm">HTML & CSS</div>
-        <div class="bg-indigo-50 p-4 rounded-lg shadow-sm">Git & GitHub</div>
-        <div class="bg-indigo-50 p-4 rounded-lg shadow-sm">Docker</div>
-      </div>
-    </div>
+  <!-- Resume -->
+  <section id="resume" class="p-8 max-w-4xl mx-auto">
+    <h3 class="text-2xl font-semibold mb-4">Resume</h3>
+    <a href="resume.pdf" target="_blank" class="text-blue-500 underline">Download My Resume (PDF)</a>
   </section>
 
-  <!-- Resume Section -->
-  <section id="resume" class="py-16 px-4 bg-gray-100 text-center">
-    <div class="max-w-4xl mx-auto">
-      <h2 class="text-3xl font-semibold mb-6">My Resume</h2>
-      <p class="mb-4 text-gray-700">Click below to download my resume in PDF format.</p>
-      <a href="Benjamin_Resume.pdf" download class="inline-flex items-center px-6 py-3 bg-green-600 text-white rounded hover:bg-green-700 transition">
-        <i class="fas fa-download mr-2"></i> Download Resume
-      </a>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact" class="py-16 px-4 bg-white">
-    <div class="max-w-xl mx-auto text-center">
-      <h2 class="text-3xl font-semibold mb-4">Contact Me</h2>
-      <p class="mb-4 text-gray-700">Let's connect! You can reach me via email or through the links below.</p>
-      <p class="font-medium text-indigo-700">benjaminalfayo90@gmail.com</p>
-      <div class="flex justify-center gap-6 mt-6 text-xl">
-        <a href="https://github.com/Jujutsualfayo" target="_blank" class="text-gray-700 hover:text-black"><i class="fab fa-github"></i></a>
-        <a href="https://linkedin.com/in/benjamin-alfayo" target="_blank" class="text-blue-700 hover:text-blue-900"><i class="fab fa-linkedin"></i></a>
-      </div>
-    </div>
+  <!-- Contact -->
+  <section id="contact" class="p-8 max-w-4xl mx-auto">
+    <h3 class="text-2xl font-semibold mb-4">Contact Me</h3>
+    <p>Email: <a href="mailto:benjaminalfayo90@gmail.com" class="text-blue-500 underline">benjaminalfayo90@gmail.com</a></p>
+    <p>GitHub: <a href="https://github.com/Jujutsualfayo" class="text-blue-500 underline" target="_blank">Jujutsualfayo</a></p>
+    <p>LinkedIn: <a href="https://linkedin.com/in/benjamin-alfayo" class="text-blue-500 underline" target="_blank">Benjamin Alfayo</a></p>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-gray-50 text-center py-6 border-t mt-10">
-    <p class="text-sm text-gray-500">&copy; 2025 Benjamin Otieno Alfayo. All rights reserved.</p>
+  <footer class="text-center py-4 mt-8 border-t dark:border-gray-700">
+    <p>&copy; 2025 Benjamin Otieno. All rights reserved.</p>
   </footer>
 
+  <!-- Dark Mode Script -->
+  <script>
+    const toggleTheme = document.getElementById("toggleTheme");
+    toggleTheme.addEventListener("click", () => {
+      document.documentElement.classList.toggle("dark");
+    });
+  </script>
 </body>
 </html>
