@@ -1,80 +1,90 @@
 <!DOCTYPE html>
 <html lang="en" class="dark">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Benjamin's Portfolio</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    // Toggle dark/light mode
-    function toggleTheme() {
-      document.documentElement.classList.toggle('dark');
-    }
-  </script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-papAZ9zkdFD3b9UOZozbA8Dsv4vDAjHlrbvCj4+dHDKmK4F2GL2yRp2LdJ7OpMS2lt1EPCcUquRlYpBldTIr8g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
-<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-white font-sans">
-  <header class="p-6 shadow-md flex justify-between items-center">
-    <h1 class="text-2xl font-bold">👨‍💻 Benjamin Otieno</h1>
-    <button onclick="toggleTheme()" class="bg-gray-200 dark:bg-gray-700 px-4 py-1 rounded">🌓 Toggle Theme</button>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Benjamin Alfayo | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      // Toggle Dark Mode
+      function toggleDarkMode() {
+        document.documentElement.classList.toggle('dark');
+      }
+    </script>
+  </head>
+  <body class="bg-white text-gray-800 dark:bg-gray-900 dark:text-white transition-colors duration-300">
+    <header class="p-4 flex justify-between items-center shadow-md dark:shadow-gray-800">
+      <h1 class="text-2xl font-bold">👨‍💻 Benjamin Alfayo</h1>
+      <button onclick="toggleDarkMode()" class="bg-gray-200 dark:bg-gray-700 px-4 py-1 rounded-full text-sm">
+        🌗 Toggle Mode
+      </button>
+    </header>
 
-  <section class="p-6">
-    <h2 class="text-xl font-semibold mb-4">📜 About Me</h2>
-    <p>
-      Hi! I'm Benjamin Otieno, a passionate software engineer specializing in full-stack web development.
-      I love building efficient, user-friendly web applications and solving real-world problems through code.
-    </p>
-  </section>
+    <main class="max-w-4xl mx-auto px-4 py-10 space-y-12">
+      <section class="text-center">
+        <h2 class="text-3xl font-semibold mb-2">Welcome to My Portfolio 🚀</h2>
+        <p class="text-lg text-gray-600 dark:text-gray-300">
+          Backend Developer | Passionate about solving real-world problems through clean code.
+        </p>
+      </section>
 
-  <section class="p-6">
-    <h2 class="text-xl font-semibold mb-4">🧰 Skills</h2>
-    <ul class="list-disc list-inside">
-      <li>⚙️ Python, JavaScript, HTML, CSS</li>
-      <li>🧪 Django, React, Node.js</li>
-      <li>💽 MySQL, PostgreSQL</li>
-      <li>☁️ Git, GitHub, Vercel</li>
-    </ul>
-  </section>
+      <section>
+        <h3 class="text-2xl font-bold mb-4">🧩 Projects</h3>
+        <div class="grid md:grid-cols-2 gap-6">
+          <!-- Interior Health -->
+          <div class="p-4 border rounded-lg dark:border-gray-700 hover:shadow-lg transition">
+            <h4 class="text-xl font-semibold">💊 Interior Health</h4>
+            <p class="text-sm mt-2 text-gray-700 dark:text-gray-400">
+              A health app delivering affordable drugs to interior regions with role-based access and payment features.
+            </p>
+            <a href="https://github.com/Jujutsualfayo/interiorhealth_vol2" target="_blank" class="inline-block mt-3 text-blue-600 dark:text-blue-400 hover:underline">
+              🔗 GitHub Repo
+            </a>
+          </div>
 
-  <section class="p-6">
-    <h2 class="text-xl font-semibold mb-4">📂 Projects</h2>
-    <div class="grid md:grid-cols-2 gap-6">
-      <div class="p-4 border dark:border-gray-700 rounded-lg">
-        <h3 class="text-lg font-bold">💊 Interior Health</h3>
-        <p>A platform offering healthcare drugs to underserved regions at affordable prices.</p>
-        <div class="mt-2">
-          <a href="https://github.com/Jujutsualfayo/interior-health" class="text-blue-500 hover:underline"><i class="fab fa-github"></i> GitHub</a>
+          <!-- Jobify -->
+          <div class="p-4 border rounded-lg dark:border-gray-700 hover:shadow-lg transition">
+            <h4 class="text-xl font-semibold">🧑‍💼 Jobify</h4>
+            <p class="text-sm mt-2 text-gray-700 dark:text-gray-400">
+              A job tracking application with authentication and status management.
+            </p>
+            <a href="https://github.com/Jujutsualfayo/jobify" target="_blank" class="inline-block mt-3 text-blue-600 dark:text-blue-400 hover:underline">
+              🔗 GitHub Repo
+            </a>
+          </div>
+
+          <!-- Project Management App -->
+          <div class="p-4 border rounded-lg dark:border-gray-700 hover:shadow-lg transition">
+            <h4 class="text-xl font-semibold">📋 Project Management App</h4>
+            <p class="text-sm mt-2 text-gray-700 dark:text-gray-400">
+              A simple full-stack project management tool built to track tasks, timelines, and team updates.
+            </p>
+            <a href="https://github.com/Jujutsualfayo/Project-Management-app" target="_blank" class="inline-block mt-3 text-blue-600 dark:text-blue-400 hover:underline">
+              🔗 GitHub Repo
+            </a>
+          </div>
         </div>
-      </div>
-      <div class="p-4 border dark:border-gray-700 rounded-lg">
-        <h3 class="text-lg font-bold">💼 Jobify</h3>
-        <p>A job tracking app to manage your job applications and statuses.</p>
-        <div class="mt-2">
-          <a href="https://github.com/Jujutsualfayo/jobify" class="text-blue-500 hover:underline"><i class="fab fa-github"></i> GitHub</a>
+      </section>
+
+      <section class="text-center">
+        <h3 class="text-xl font-bold mb-2">📄 Resume</h3>
+        <a href="resume.pdf" target="_blank" class="text-blue-600 dark:text-blue-400 hover:underline">
+          Download my Resume (PDF)
+        </a>
+      </section>
+
+      <section class="text-center">
+        <h3 class="text-xl font-bold mb-2">🔗 Connect with Me</h3>
+        <div class="flex justify-center space-x-6 text-2xl">
+          <a href="https://github.com/Jujutsualfayo" target="_blank">🐙</a>
+          <a href="https://linkedin.com/in/benjamin-alfayo" target="_blank">💼</a>
+          <a href="mailto:benjaminalfayo90@gmail.com">✉️</a>
         </div>
-      </div>
-      <div class="p-4 border dark:border-gray-700 rounded-lg">
-        <h3 class="text-lg font-bold">📊 Project Management App</h3>
-        <p>Tool for managing tasks, timelines, and collaboration for teams. </p>
-      </div>
-    </div>
-  </section>
+      </section>
+    </main>
 
-  <section class="p-6">
-    <h2 class="text-xl font-semibold mb-4">📄 Resume</h2>
-    <p>Download my resume in PDF:</p>
-    <a href="./Benjamin_Resume.pdf" class="text-blue-500 hover:underline" download>📎 Download Resume</a>
-  </section>
-
-  <section class="p-6">
-    <h2 class="text-xl font-semibold mb-4">📫 Contact</h2>
-    <p>Email: <a href="mailto:benjaminalfayo90@gmail.com" class="text-blue-500 hover:underline">benjaminalfayo90@gmail.com</a></p>
-    <p>GitHub: <a href="https://github.com/Jujutsualfayo" class="text-blue-500 hover:underline">@Jujutsualfayo</a></p>
-  </section>
-
-  <footer class="text-center p-6 text-sm text-gray-600 dark:text-gray-400">
-    © 2025 Benjamin Otieno. Built with 💖 and Tailwind CSS.
-  </footer>
-</body>
+    <footer class="text-center py-6 text-sm text-gray-500 dark:text-gray-400">
+      © 2025 Benjamin Alfayo. All rights reserved.
+    </footer>
+  </body>
 </html>
