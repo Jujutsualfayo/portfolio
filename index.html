@@ -1,21 +1,15 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Benjamin Alfayo | Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      // Toggle Dark Mode
-      function toggleDarkMode() {
-        document.documentElement.classList.toggle('dark');
-      }
-    </script>
   </head>
   <body class="bg-white text-gray-800 dark:bg-gray-900 dark:text-white transition-colors duration-300">
     <header class="p-4 flex justify-between items-center shadow-md dark:shadow-gray-800">
       <h1 class="text-2xl font-bold">👨‍💻 Benjamin Alfayo</h1>
-      <button onclick="toggleDarkMode()" class="bg-gray-200 dark:bg-gray-700 px-4 py-1 rounded-full text-sm">
+      <button id="theme-toggle" class="bg-gray-200 dark:bg-gray-700 px-4 py-1 rounded-full text-sm">
         🌗 Toggle Mode
       </button>
     </header>
@@ -57,7 +51,7 @@
           <div class="p-4 border rounded-lg dark:border-gray-700 hover:shadow-lg transition">
             <h4 class="text-xl font-semibold">📋 Project Management App</h4>
             <p class="text-sm mt-2 text-gray-700 dark:text-gray-400">
-              A simple full-stack project management tool built to track tasks, timelines, and team updates.
+              A full-stack project management tool for tracking tasks, timelines, and updates.
             </p>
             <a href="https://github.com/Jujutsualfayo/Project-Management-app" target="_blank" class="inline-block mt-3 text-blue-600 dark:text-blue-400 hover:underline">
               🔗 GitHub Repo
@@ -86,5 +80,19 @@
     <footer class="text-center py-6 text-sm text-gray-500 dark:text-gray-400">
       © 2025 Benjamin Alfayo. All rights reserved.
     </footer>
+
+    <script>
+      // Apply saved theme on load
+      if (localStorage.getItem('theme') === 'dark') {
+        document.documentElement.classList.add('dark');
+      }
+
+      // Toggle theme
+      document.getElementById('theme-toggle').addEventListener('click', () => {
+        document.documentElement.classList.toggle('dark');
+        const isDark = document.documentElement.classList.contains('dark');
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+      });
+    </script>
   </body>
 </html>
