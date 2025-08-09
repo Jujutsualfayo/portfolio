@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Interior Health | Project Details - Benjamin Alfayo</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { darkMode: 'class' };
+  </script>
+</head>
+<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-300 font-sans">
+
+  <header class="max-w-4xl mx-auto p-6 border-b border-gray-300 dark:border-gray-700 flex justify-between items-center">
+    <h1 class="text-3xl font-bold">Interior Health</h1>
+    <a href="/" class="text-blue-600 dark:text-blue-400 hover:underline">← Back to Portfolio</a>
+  </header>
+
+  <main class="max-w-4xl mx-auto p-6 space-y-6">
+
+    <section>
+      <h2 class="text-2xl font-semibold mb-2">Project Summary</h2>
+      <p>
+        A digital health logistics and ordering platform that connects rural patients with essential drugs through health workers and clinics.
+      </p>
+    </section>
+
+    <section>
+      <h2 class="text-2xl font-semibold mb-2">Problem Statement</h2>
+      <p>
+        In interior rural regions, patients have limited access to affordable healthcare drugs. This project aims to digitize and streamline the ordering and delivery process, improving access and transparency.
+      </p>
+    </section>
+
+    <section>
+      <h2 class="text-2xl font-semibold mb-2">Tech Stack</h2>
+      <ul class="list-disc list-inside">
+        <li>Django REST Framework (Backend API)</li>
+        <li>React + Tailwind CSS (Frontend)</li>
+        <li>PostgreSQL (Database)</li>
+        <li>WebSocket (Real-time updates)</li>
+        <li>Docker (Containerization)</li>
+        <li>M-Pesa API (Payment integration)</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2 class="text-2xl font-semibold mb-2">Features</h2>
+      <ul class="list-disc list-inside">
+        <li>Role-based authentication (Admin, Health Worker, Patient)</li>
+        <li>Medicine search and ordering</li>
+        <li>Real-time order status tracking</li>
+        <li>Payment integration via M-Pesa</li>
+        <li>Delivery tracking and notifications</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2 class="text-2xl font-semibold mb-2">Challenges & Solutions</h2>
+      <p>
+        Implementing real-time updates with WebSocket in a scalable way was a major challenge. We overcame this by structuring backend event handling with async workers and ensuring the frontend seamlessly handles connection drops.
+      </p>
+    </section>
+
+    <section>
+      <h2 class="text-2xl font-semibold mb-2">Impact</h2>
+      <p>
+        Currently used by Community Health Extension Workers in Makueni County, improving medicine access and order transparency for over 100 users. Plans to scale to other underserved locations are underway.
+      </p>
+    </section>
+
+    <section>
+      <h2 class="text-2xl font-semibold mb-2">Screenshots</h2>
+      <img src="/images/interiorhealth-dashboard.png" alt="Interior Health Dashboard" class="rounded shadow max-w-full" />
+      
+    </section>
+
+    <section class="pt-4 border-t border-gray-300 dark:border-gray-700">
+      <a href="https://interiorhealth-vol2.vercel.app" target="_blank" rel="noopener" class="text-blue-600 dark:text-blue-400 hover:underline mr-6">🔗 Live Demo</a>
+      <a href="https://github.com/Jujutsualfayo/interiorhealth_vol2" target="_blank" rel="noopener" class="text-blue-600 dark:text-blue-400 hover:underline">📂 GitHub Repo</a>
+    </section>
+
+  </main>
+
+  <footer class="text-center p-6 text-sm text-gray-600 dark:text-gray-400">
+    © 2025 Benjamin Alfayo
+  </footer>
+
+  <script>
+    // Dark mode toggle persistence 
+  </script>
+</body>
+</html>
